@@ -1,3 +1,4 @@
+#inlcude the command line and pushed through git
 class Seat:
     def __init__(self,type,price,place,id):
         self.type=type
