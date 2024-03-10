@@ -1,5 +1,6 @@
 #inlcude the command line and pushed through git
 #Seat is a class which consist of seat description.
+#gghhg
 class Seat:
     def __init__(self,type,price,place,id):
         self.type=type
