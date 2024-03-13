@@ -25,17 +25,18 @@ class discount:
         self.seat_type=seat_type
         self.seat_place=seat_place
         self.discount_rate=discount_rate
-    def calculation(self):
-        for i in range(len(booked)):
-            if d[0].seat_type==booked[i].seat_type:
-                if d[0].seat_place==booked[i].seat_place:
-                    return booked[i].seat_price-(booked[i].seat_price*d[0].discount_rate/100)
-                else:
-                    return booked[i].seat_price
+d=[discount("sleeper","corner seat",5)]
+def calculation():
+    for i in range(len(booked)):
+        if d[0].seat_type == booked[i].seat_type:
+            if d[0].seat_place == booked[i].seat_place:
+                return booked[i].seat_price-(booked[i].seat_price*d[0].discount_rate/100)
             else:
                 return booked[i].seat_price
+        else:
+            return booked[i].seat_price
 
-d=[discount("sleeper","corner seat",5)]
+
 
 
 def UserChoiceIsToViewTheSeats():
@@ -66,7 +67,7 @@ while True:
             for i in range(len(bus)):
                 if seat==bus[i].s.id:
                     booked.append(Booked(bus[i].name,bus[i].s.type,bus[i].s.price,bus[i].s.place,bus[i].s.id))
-                    print("After Discount You have to PAY:",d[0].calculation())
+                    print("After Discount You have to PAY:",calculation())
                     print("*******BOOKING CONFORMIED***********")
                 else:
                     if i==len(bus):
@@ -83,4 +84,4 @@ while True:
         break
     else:
         print("Enter the valid option.")
-    print("***************THANK YOU VISIT AGAIN***********")
+print("***************THANK YOU VISIT AGAIN***********")
